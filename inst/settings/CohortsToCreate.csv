@@ -1,5 +1,5 @@
 cohort_id,cohort_name
-749,metastatic prostate cancer
+749,Metastatic prostate cancer
 991,BMI < 18.5 (WHO underweight)
 992,BMI 18.5 - BMI 24.9 (WHO normal weight)
 993,"BMI 25-29,9 (WHO overweight)"
@@ -14,9 +14,9 @@ cohort_id,cohort_name
 990,Chronic kidney disease
 1000,Type 2 diabetes
 1001,Liver disease
-413,PSA levels at diagnosis <10
-412,PSA 10-20
-414,PSA > 20
+1106,PSA levels at diagnosis <10
+1107,PSA 10-20
+1108,PSA > 20
 1002,Metastasis to nodes
 1003,Metastasis to bone
 1004,Metastatsis to central nervous system
@@ -26,3 +26,4 @@ cohort_id,cohort_name
 1007,Primary adrenal insufficiency
 1008,Secondary adrenal insufficiency
 1006,HIV positive
+1109,Seizures
