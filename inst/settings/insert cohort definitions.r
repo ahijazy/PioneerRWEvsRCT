@@ -2,7 +2,7 @@ library(ROhdsiWebApi)
 
 baseUrl <-"https://pioneer.hzdr.de/WebAPI"
 
-token <- 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhaGlqYXp5QGVpc2JtLm9yZyIsIlNlc3Npb24tSUQiOm51bGwsImV4cCI6MTcwNzk1OTc3OX0.TsdRnInAvCseWJE8Uj4Gswm1XozsuMSAVVCY5aQvpfTqWYYsKeR1rPF0pMrTvWKRwaAbYH8WRI2wSoFyf73bgg'
+token <- 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiZGVtZXVsZGVyQGVpc2JtLm9yZyIsIlNlc3Npb24tSUQiOm51bGwsImV4cCI6MTcxMDIwNDE4Nn0.o2-J900Xie06n90Uikrsx8BHhctXzJKEWb5BiRmHkSQzxvWXWCrMOGfCgo_cINakYwnjkT9I0M4xdvsGjP1RFQ'
 setAuthHeader(baseUrl = baseUrl, token)
 
 # after inserting the cohorts
