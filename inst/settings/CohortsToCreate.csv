@@ -50,3 +50,6 @@ cohortId, cohort_name
 1128,Liver failure from ARCHES exclusion criteria
 1131,Peripheral neuropathy
 1135,HBV or HCV
+1249, Matches the exclusion criteria of any trial
+1243, Eligible for all trials
+1248, Not eligble for any trial
