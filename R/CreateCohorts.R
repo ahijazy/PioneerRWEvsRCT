@@ -1,6 +1,6 @@
-# Copyright 2023 Observational Health Data Sciences and Informatics
+# Copyright 2025 Observational Health Data Sciences and Informatics
 #
-# This file is part of PioneerRWEvsRT
+# This file is part of PioneerRWEvsRCT
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ checkForInputFileEncoding <- function(fileName) {
   
   # Create study cohort table structure:
   sql <- SqlRender::loadRenderTranslateSql(sqlFilename = "CreateCohortTable.sql",
-                                           packageName = "PioneerRWEvsRT",
+                                           packageName = "PioneerRWEvsRCT",
                                            dbms = attr(connection, "dbms"),
                                            tempEmulationSchema = tempEmulationSchema,
                                            cohort_database_schema = cohortDatabaseSchema,
@@ -51,13 +51,13 @@ checkForInputFileEncoding <- function(fileName) {
   
   
   # Instantiate cohorts:
-  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "PioneerRWEvsRT")
+  pathToCsv <- system.file("settings", "CohortsToCreate.csv", package = "PioneerRWEvsRCT")
   checkForInputFileEncoding(pathToCsv)
   cohortsToCreate <- readr::read_csv(pathToCsv, col_types = readr::cols())
   for (i in 1:nrow(cohortsToCreate)) {
     writeLines(paste("Creating cohort:", cohortsToCreate$name[i]))
     sql <- SqlRender::loadRenderTranslateSql(sqlFilename = paste0(cohortsToCreate$name[i], ".sql"),
-                                             packageName = "PioneerRWEvsRT",
+                                             packageName = "PioneerRWEvsRCT",
                                              dbms = attr(connection, "dbms"),
                                              tempEmulationSchema = tempEmulationSchema,
                                              cdm_database_schema = cdmDatabaseSchema,

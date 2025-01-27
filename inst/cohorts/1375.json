@@ -24348,7 +24348,7 @@
 							{
 								"Criteria" : {
 									"ConditionOccurrence" : {
-										"CodesetId" : 47,
+										"CodesetId" : 45,
 										"ConditionTypeExclude" : false
 									}
 								},

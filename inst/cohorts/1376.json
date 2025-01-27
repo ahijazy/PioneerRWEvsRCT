@@ -12271,6 +12271,31 @@
 					}
 				]
 			}
+		},
+		{
+			"id" : 50,
+			"name" : "[RQ 36] Hypertensive complication",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 42709887,
+							"CONCEPT_NAME" : "Hypertensive complication",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "449759005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : true
+					}
+				]
+			}
 		}
 	],
 	"QualifiedLimit" : {
@@ -13675,7 +13700,7 @@
 							{
 								"Criteria" : {
 									"ConditionOccurrence" : {
-										"CodesetId" : 48,
+										"CodesetId" : 50,
 										"ConditionTypeExclude" : false
 									}
 								},
