@@ -1,15 +1,8 @@
 cohort_name,cohortId,atlasId
 metastatic prostate cancer,1306,1306
-BMI < 18.5 (WHO underweight),991,991
-BMI 18.5 - BMI 24.9 (WHO normal weight),992,992
-"BMI 25-29,9 (WHO overweight)",993,993
-BMI => 30 (WHO obesity),994,994
 Charlson comorbidity index = 0,985,985
 CCI = 1,986,986
 CCI =>2,987,987
-ECOG performance status = 0 or 1,995,995
-ECOG = 2,996,996
-ECOG >2,997,997
 Cardiovascular disease,1079,1079
 Chronic kidney disease,1347,1347
 Type 2 diabetes,1000,1000
@@ -72,3 +65,24 @@ Hypertensive disorder,1382,1382
 Heart failure,1381,1381
 Thromboembolism,1388,1388
 Arteriosclerosis,1389,1389
+mHSPC + treatment from ARASENS,1461,1461
+mHSPC + treatment from ARCHES,1462,1462
+mHSPC + treatment from CHAARTED,1463,1463
+mHSPC + treatment from ENZAMET/GETUG-AFU,1464,1464
+mHSPC + treatment from HORRAD,1465,1465
+mHSPC + treatment from LATTITUDE,1466,1466
+mHSPC + treatment from NCT02058706 ,1467,1467
+mHSPC + treatment from PEACE-1,1468,1468
+mHSPC + treatment from STAMPEDE,1469,1469
+mHSPC + treatment from TITAN,1470,1470
+ARASENS exclusion criteria + treatment from ARASENS,1471,1471
+ARCHES exclusion criteria + treatment from ARCHES,1472,1472
+CHAARTED exclusion criteria + treatment from CHAARTED,1473,1473
+ENZAMET exclusion criteria + treatment from ENZAMET,1474,1474
+GETUG-AFU 15 exclusion criteria + treatment from GETUG-AFU,1475,1475
+HORRAD exclusion criteria + treatment from HORRAD,1476,1476
+LATITUDE exclusion criteria + treatment from LATITUDE,1477,1477
+NCT02058706 exclusion criteria + treatment from NCT02058706 ,1479,1479
+PEACE-1 exclusion criteria + treatment from PEACE-1,1480,1480
+STAMPEDE exclusion criteria + treatment from STAMPEDE,1459,1459
+TITAN exclusion criteria + treatment from TITAN,1481,1481
