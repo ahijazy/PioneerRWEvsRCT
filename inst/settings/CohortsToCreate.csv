@@ -1,88 +1,118 @@
-cohort_name,cohortId,atlasId
-metastatic prostate cancer,1306,1306
-Charlson comorbidity index = 0,985,985
-CCI = 1,986,986
-CCI =>2,987,987
-Cardiovascular disease,1079,1079
-Chronic kidney disease,1347,1347
-Type 2 diabetes,1000,1000
-Liver disease,1001,1001
-PSA levels at diagnosis <10,1348,1348
-PSA 10-20,1107,1107
-PSA > 20,1108,1108
-Metastasis to nodes,1002,1002
-Metastasis to bone,1003,1003
-Metastatsis to central nervous system,1004,1004
-Metastasis to other visceral,1005,1005
-Other malignancies,989,989
-Bone marrow failure,1078,1078
-Primary adrenal insufficiency,1007,1007
-Secondary adrenal insufficiency,1008,1008
-HIV positive,1006,1006
-Seizures,1109,1109
-ARASENS exclusion criteria,1301,1301
-ARCHES exclusion criteria,1302,1302
-CHAARTED exclusion criteria,1303,1303
-ENZAMET exclusion criteria,1304,1304
-GETUG-AFU 15 exclusion criteria,1305,1305
-HORRAD exclusion criteria,1307,1307
-LATITUDE exclusion criteria,1308,1308
-SWOG-1216  exclusion criteria,1309,1309
-NCT02058706 exclusion criteria,1310,1310
-PEACE-1 exclusion criteria,1311,1311
-STAMPEDE exclusion criteria,1312,1312
-TITAN exclusion criteria,1313,1313
-ECOG above 1,1349,1349
-Bone marrow failure,1350,1350
-Liver failure,1351,1351
-Chronic kidney disease,1352,1352
-Stroke,1353,1353
-CVD from ARASENS,1354,1354
-Metastasis to CNV,1355,1355
-Seizures,1356,1356
-CVD from ARCHES,1357,1357
-ECOG above 2,1358,1358
-Peripheral neuropathy,1359,1359
-CVD from CHAARTED,1360,1360
-CVD from SWOG-1216,1362,1362
-HBV or HCV,1363,1363
-Adrenal insufficiency from SWOG-1216,1364,1364
-CVD from PEACE-1,1365,1365
-Hypertension,1324,1324
-Not eligible for any trial ,1368,1368
-Not eligible for any trial excluding HORRAD,1375,1375
-eligible for all trials,1376,1376
-Matches the exclusion criteria of any trial,1390,1390
-Renal Failure,1378,1378
-Cardiac arrest,1379,1379
-Cardiac arrhythmia,1380,1380
-Coronary artery disease,1387,1387
-Acute coronary syndrome,1386,1386
-Unstable angina,1385,1385
-Stage 2 hypertension,1384,1384
-Malignant hypertension,1383,1383
-Hypertensive disorder,1382,1382
-Heart failure,1381,1381
-Thromboembolism,1388,1388
-Arteriosclerosis,1389,1389
-mHSPC + treatment from ARASENS,1461,1461
-mHSPC + treatment from ARCHES,1462,1462
-mHSPC + treatment from CHAARTED,1463,1463
-mHSPC + treatment from ENZAMET/GETUG-AFU,1464,1464
-mHSPC + treatment from HORRAD,1465,1465
-mHSPC + treatment from LATTITUDE,1466,1466
-mHSPC + treatment from NCT02058706 ,1467,1467
-mHSPC + treatment from PEACE-1,1468,1468
-mHSPC + treatment from STAMPEDE,1469,1469
-mHSPC + treatment from TITAN,1470,1470
-ARASENS exclusion criteria + treatment from ARASENS,1471,1471
-ARCHES exclusion criteria + treatment from ARCHES,1472,1472
-CHAARTED exclusion criteria + treatment from CHAARTED,1473,1473
-ENZAMET exclusion criteria + treatment from ENZAMET,1474,1474
-GETUG-AFU 15 exclusion criteria + treatment from GETUG-AFU,1475,1475
-HORRAD exclusion criteria + treatment from HORRAD,1476,1476
-LATITUDE exclusion criteria + treatment from LATITUDE,1477,1477
-NCT02058706 exclusion criteria + treatment from NCT02058706 ,1479,1479
-PEACE-1 exclusion criteria + treatment from PEACE-1,1480,1480
-STAMPEDE exclusion criteria + treatment from STAMPEDE,1459,1459
-TITAN exclusion criteria + treatment from TITAN,1481,1481
+cohort_name,cohort_atlas_name,cohortId,atlasId
+metastatic prostate cancer,[RQ36] Newly diagnosed mPCa v2,1306,1306
+BMI < 18.5 (WHO underweight),[RQ 36] BMI below 18.5 - WHO underweight,991,991
+BMI 18.5 - BMI 24.9 (WHO normal weight),[RQ 36] BMI 18.5 - 24.9 - WHO normal weight,992,992
+"BMI 25-29,9 (WHO overweight)",[RQ 36] BMI above 25 - WHO overweight,993,993
+BMI => 30 (WHO obesity),[RQ 36] BMI above 30 - WHO obesity,994,994
+Charlson comorbidity index = 0,[RQ 36] Charlson Comorbidity Index (cut off 0),985,985
+CCI = 1,[RQ 36] Charlson Comorbidity Index (cut off 1),986,986
+CCI =>2,[RQ 36] Charlson Comorbidity Index (2 and above),987,987
+ECOG performance status = 0 or 1,[RQ36] Performance Status ECOG=0 or 1 at met Dx,995,995
+ECOG = 2,[RQ36] Performance Status ECOG=2 at met Dx,996,996
+ECOG >2,[RQ36] Performance Status ECOG above 2 at met Dx,997,997
+Cardiovascular disease,[RQ36] Cardiovascular disease,1079,1079
+Chronic kidney disease,[RQ 36] Chronic Kidney Disease v2,1347,1347
+Type 2 diabetes,[PIONEER 3.0] O62_Diabetes mellitius_V2,1000,1000
+Liver disease,[RQ36] Abnormal hepatic function_v2,1001,1001
+PSA levels at diagnosis <10,[RQ36] PSA below 10 at mets dx FINAL,1348,1348
+PSA 10-20,[RQ36] PSA 10-20 at mets dx FINAL,1107,1107
+PSA > 20,[RQ36] PSA above 20 at mets dx FINAL,1108,1108
+Metastasis to nodes,[RQ36] Metastasis to lymph nodes,1002,1002
+Metastasis to bone,[RQ36] Metastasis to bones,1003,1003
+Metastatsis to central nervous system,[RQ36] Metastasis to CNV,1004,1004
+Metastasis to other visceral,[RQ36] Metastasis to other visceral,1005,1005
+Other malignancies,[RQ 36] Other malignancies,989,989
+Bone marrow failure,[RQ36] Bone marrow failure,1078,1078
+Primary adrenal insufficiency,[RQ36] Primary adrenal insufficiency,1007,1007
+Secondary adrenal insufficiency,[RQ36] Secondary adrenal insufficiency,1008,1008
+HIV positive,[RQ36] HIV positive,1006,1006
+Seizures,[RQ36] Seizures,1109,1109
+ARASENS exclusion criteria,[RQ 36] ARASENS exclusion v2,1301,1301
+ARCHES exclusion criteria,[RQ 36] ARCHES exclusion criteria v2,1302,1302
+CHAARTED exclusion criteria,[RQ 36] CHAARTED exclusion critera v2,1303,1303
+ENZAMET exclusion criteria,[RQ 36] ENZAMET exclusion criteria v2,1304,1304
+GETUG-AFU 15 exclusion criteria,[RQ 36] GETUG-AFU 15 exclusion v2,1305,1305
+HORRAD exclusion criteria,[RQ 36] HORRAD exclusion v2,1307,1307
+LATITUDE exclusion criteria,[RQ 36] LATITUDE exclusion criteria v2,1308,1308
+SWOG-1216  exclusion criteria,[RQ 36] SWOG-1216 exclusion v2,1309,1309
+NCT02058706 exclusion criteria,[RQ 36] NCT02058706 exclusion v2,1310,1310
+PEACE-1 exclusion criteria,[RQ 36] PEACE-1 exclusion v2,1311,1311
+STAMPEDE exclusion criteria,[RQ 36] STAMPEDE exclusion v2,1312,1312
+TITAN exclusion criteria,[RQ 36] TITAN exclusion v2,1313,1313
+ECOG above 1,[RQ 36] ECOG above 1 (2),1349,1349
+Bone marrow failure,[RQ 36] Bone marrow failure,1350,1350
+Liver failure,[RQ 36] Liver failure,1351,1351
+Chronic kidney disease,[RQ 36] Chronic kidney disease,1352,1352
+Stroke,[RQ 36] Stroke - RCT,1353,1353
+CVD from ARASENS,[RQ 36] CVD from ARASENS,1354,1354
+Metastasis to CNV,[RQ 36] Metastasis to CNV,1355,1355
+Seizures,[RQ 36] Seizures (2),1356,1356
+CVD from ARCHES,[RQ 36] CVD from ARCHES,1357,1357
+ECOG above 2,[RQ 36] ECOG above 2 (2),1358,1358
+Peripheral neuropathy,[RQ 36] Peripheral neuropathy (2),1359,1359
+CVD from CHAARTED,[RQ 36] CVD from CHAARTED,1360,1360
+CVD from SWOG-1216,[RQ 36] CVD from SWOG-1216,1362,1362
+HBV or HCV,[RQ 36] HBV or HCV (2),1363,1363
+Adrenal insufficiency from SWOG-1216,[RQ 36] Adrenal insufficiency,1364,1364
+CVD from PEACE-1,[RQ 36] CVD from PEACE-1,1365,1365
+Hypertension,"[CDS 1324] Hypertension_ALL types, including complications_cond, obs_final",1324,1324
+Not eligible for any trial ,Not eligible for any trial v2,1368,1368
+Not eligible for any trial excluding HORRAD,[RQ 36] Not eligible for any trial excluding HORRAD,1375,1375
+eligible for all trials,eligible for all trials v2,1376,1376
+Matches the exclusion criteria of any trial,[RQ 36] Matches the exclusion criteria of any trial,1390,1390
+Renal Failure,[RQ 36] Renal failure,1378,1378
+Cardiac arrest,[RQ 36] Cardiac arrest,1379,1379
+Cardiac arrhythmia,[RQ 36] Cardiac arrhythmia,1380,1380
+Coronary artery disease,[RQ 36] Coronary artery disease,1387,1387
+Acute coronary syndrome,[RQ 36] Acute coronary syndrome,1386,1386
+Unstable angina,[RQ 36] unstable angina,1385,1385
+Stage 2 hypertension,[RQ 36] stage 2 hypertension,1384,1384
+Malignant hypertension,[RQ36] malignant hypertension,1383,1383
+Hypertensive disorder,[RQ 36] hypertensive disorder,1382,1382
+Heart failure,[RQ 36] heart failure,1381,1381
+Thromboembolism,[RQ 36] Thromboembolism,1388,1388
+Arteriosclerosis,[RQ 36]  Arteriosclerosis,1389,1389
+mHSPC + treatment from ARASENS,[RQ36] Newly diagnosed mPCa v2 + treatent ARASENS,1461,1461
+mHSPC + treatment from ARCHES,[RQ36] Newly diagnosed mPCa v2 + treatment from ARCHES,1462,1462
+mHSPC + treatment from CHAARTED,[RQ36] Newly diagnosed mPCa v2 + treatment CHAARTED,1463,1463
+mHSPC + treatment from ENZAMET,[RQ36] Newly diagnosed mPCa v2 + treatment from ENZAMET,1464,1464
+mHSPC + treatment from HORRAD,[RQ36] Newly diagnosed mPCa v2 + treatment from HORRAD,1465,1465
+mHSPC + treatment from LATTITUDE,[RQ36] Newly diagnosed mPCa v2 + treatment from LATITUDE,1466,1466
+mHSPC + treatment from NCT02058706 ,[RQ36] Newly diagnosed mPCa v2 + treatment from NCT02058706,1467,1467
+mHSPC + treatment from PEACE-1,[RQ36] Newly diagnosed mPCa v2 + treatment PEACE-1,1468,1468
+mHSPC + treatment from STAMPEDE,[RQ36] Newly diagnosed mPCa v2 + treatment from STAMPEDE,1469,1469
+mHSPC + treatment from TITAN,[RQ36] Newly diagnosed mPCa v2 + treatment from TITAN,1470,1470
+ARASENS exclusion criteria + treatment from ARASENS,[RQ 36] ARASENS exclusion v2 + treatment from ARASENS,1471,1471
+ARCHES exclusion criteria + treatment from ARCHES,[RQ 36] ARCHES exclusion criteria v2 + treatment from ARCHES,1472,1472
+CHAARTED exclusion criteria + treatment from CHAARTED,[RQ 36] CHAARTED exclusion critera v2 + treatment from CHAARTED,1473,1473
+ENZAMET exclusion criteria + treatment from ENZAMET,[RQ 36] ENZAMET exclusion criteria v2 + treatment from ENZAMET,1474,1474
+GETUG-AFU 15 exclusion criteria + treatment from GETUG-AFU,[RQ 36] GETUG-AFU 15 exclusion v2 + treatment from GETUG-AFU-15,1475,1475
+HORRAD exclusion criteria + treatment from HORRAD,[RQ 36] HORRAD exclusion v2 + treatment from HORRAD,1476,1476
+LATITUDE exclusion criteria + treatment from LATITUDE,[RQ 36] LATITUDE exclusion criteria v2 + treatment from LATITUDE,1477,1477
+NCT02058706 exclusion criteria + treatment from NCT02058706 ,[RQ 36] NCT02058706 exclusion v2 + treatment from NCT02058706,1479,1479
+PEACE-1 exclusion criteria + treatment from PEACE-1,[RQ 36] PEACE-1 exclusion v2 + treatment from PEACE-1,1480,1480
+STAMPEDE exclusion criteria + treatment from STAMPEDE,[RQ 36] STAMPEDE exclusion v2 + treatment from STAMPEDE,1459,1459
+TITAN exclusion criteria + treatment from TITAN,[RQ 36] TITAN exclusion v2 + treatment from TITAN,1481,1481
+mHSPC + darolutamide,[RQ36] Newly diagnosed mPCa v2 + Darolutamide,1502,1502
+mHSPC + enzalutamide,[RQ36] Newly diagnosed mPCa v2 + Enzalutamide,1503,1503
+mHSPC + docetaxel,[RQ36] Newly diagnosed mPCa v2 + Docetaxel,1504,1504
+mHSPC + radiotherapy,[RQ36] Newly diagnosed mPCa v2 + Radiotherapy,1505,1505
+mHSPC + abiraterone,[RQ36] Newly diagnosed mPCa v2 + Abiraterone,1506,1506
+mHSPC + apalutamide,[RQ36] Newly diagnosed mPCa v2 + Apalutamide,1507,1507
+ARASENS exclusion criteria + darolutamide,[RQ 36] ARASENS exclusion v2 + darolutamide,1491,1491
+ARCHES exclusion criteria + Enzalutamide,[RQ 36] ARCHES exclusion criteria v2 + Enzalutamide,1492,1492
+CHAARTED exclusion criteria + Docetaxel,[RQ 36] CHAARTED exclusion critera v2 + Docetaxel,1493,1493
+ENZAMET exclusion criteria + enzalutamide,[RQ 36] ENZAMET exclusion criteria v2 + Enzalutamide,1494,1494
+GETUG-AFU 15 exclusion criteria + docetaxel,[RQ 36] GETUG-AFU 15 exclusion v2 + Docetaxel,1495,1495
+HORRAD exclusion criteria + radiotherapy,[RQ 36] HORRAD exclusion v2 + Radiotherapy,1496,1496
+LATITUDE exclusion criteria + abiraterone,[RQ 36] LATITUDE exclusion criteria v2 + Abiraterone,1497,1497
+NCT02058706 exclusion criteria + enzalutamide,[RQ 36] NCT02058706 exclusion v2 + Enzalutamide,1498,1498
+PEACE-1 exclusion criteria + abiraterone,[RQ 36] PEACE-1 exclusion v2 + Abiraterone,1499,1499
+STAMPEDE exclusion criteria + abiraterone,[RQ 36] STAMPEDE exclusion v2 + Abiraterone,1500,1500
+TITAN exclusion criteria + apalutamide,[RQ 36] TITAN exclusion v2 + Apalutamide,1501,1501
+Not eligible for any trial testing Enzalutamide,[RQ 36] Not eligible for any trial testing Enzalutamide,1508,1508
+Not eligible for any trial testing Docetaxel,[RQ 36] Not eligible for any trial testing Docetaxel,1509,1509
+Not eligible for any trial testing Abiraterone,[RQ 36] Not eligible for any trial testing Abiraterone,1510,1510
+Not eligible for any trial testing Enzalutamide + Enzalutamide,[RQ 36] Not eligible for any trial testing Enzalutamide + Enzalutamide,1511,1511
+Not eligible for any trial testing Docetaxel + Docetaxel,[RQ 36] Not eligible for any trial testing Docetaxel + Docetaxel,1512,1512
+exclusion from all trials testing abiraterone + abiraterone,[RQ 36] Not eligible for any trial testing Abiraterone + Abiraterone,1513,1513
