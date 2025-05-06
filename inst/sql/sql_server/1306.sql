@@ -471,7 +471,7 @@ JOIN #Codesets cs on (de.drug_concept_id = cs.concept_id and cs.codeset_id = 7)
 
 -- End Drug Exposure Criteria
 
-) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,-91,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,0,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
 GROUP BY p.person_id, p.event_id
 HAVING COUNT(cc.event_id) = 0
 -- End Correlated Criteria

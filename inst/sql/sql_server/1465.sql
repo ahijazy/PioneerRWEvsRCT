@@ -136,6 +136,28 @@ UNION  select c.concept_id
 
 ) E ON I.concept_id = E.concept_id
 WHERE E.concept_id is null
+) C UNION ALL 
+SELECT 10 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (1378382,902729,40222431,1315942)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (1378382,902729,40222431,1315942)
+  and c.invalid_reason is null
+
+) I
+) C UNION ALL 
+SELECT 11 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (40239056,963987,42900250,1361291)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (40239056,963987,42900250,1361291)
+  and c.invalid_reason is null
+
+) I
 ) C
 ;
 
@@ -504,7 +526,7 @@ JOIN #Codesets cs on (de.drug_concept_id = cs.concept_id and cs.codeset_id = 7)
 
 -- End Drug Exposure Criteria
 
-) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,-91,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,0,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
 GROUP BY p.person_id, p.event_id
 HAVING COUNT(cc.event_id) = 0
 -- End Correlated Criteria
@@ -583,7 +605,60 @@ FROM
   INNER JOIN
   (
     -- Begin Correlated Criteria
-select 0 as index_id, cc.person_id, cc.event_id
+select 0 as index_id, p.person_id, p.event_id
+from #qualified_events p
+LEFT JOIN (
+SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Drug Exposure Criteria
+select C.person_id, C.drug_exposure_id as event_id, C.drug_exposure_start_date as start_date,
+       COALESCE(C.DRUG_EXPOSURE_END_DATE, DATEADD(day,C.DAYS_SUPPLY,DRUG_EXPOSURE_START_DATE), DATEADD(day,1,C.DRUG_EXPOSURE_START_DATE)) as end_date,
+       C.visit_occurrence_id,C.drug_exposure_start_date as sort_date
+from 
+(
+  select de.* 
+  FROM @cdm_database_schema.DRUG_EXPOSURE de
+JOIN #Codesets cs on (de.drug_concept_id = cs.concept_id and cs.codeset_id = 10)
+) C
+
+
+-- End Drug Exposure Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= DATEADD(day,90,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(cc.event_id) = 0
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+select 1 as index_id, p.person_id, p.event_id
+from #qualified_events p
+LEFT JOIN (
+SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Drug Era Criteria
+select C.person_id, C.drug_era_id as event_id, C.drug_era_start_date as start_date, C.drug_era_end_date as end_date,
+    CAST(NULL as bigint) as visit_occurrence_id,C.drug_era_start_date as sort_date
+from 
+(
+  select de.* 
+  FROM @cdm_database_schema.DRUG_ERA de
+where de.drug_concept_id in (SELECT concept_id from  #Codesets where codeset_id = 11)
+) C
+
+
+-- End Drug Era Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,0,P.START_DATE) AND A.START_DATE <= DATEADD(day,90,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(cc.event_id) = 0
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+select 2 as index_id, cc.person_id, cc.event_id
 from (SELECT p.person_id, p.event_id 
 FROM #qualified_events P
 JOIN (
@@ -595,7 +670,7 @@ from
 (
   select de.* , row_number() over (PARTITION BY de.person_id ORDER BY de.drug_exposure_start_date, de.drug_exposure_id) as ordinal
   FROM @cdm_database_schema.DRUG_EXPOSURE de
-JOIN #Codesets cs on (de.drug_concept_id = cs.concept_id and cs.codeset_id = 8)
+JOIN #Codesets cs on (de.drug_concept_id = cs.concept_id and cs.codeset_id = 7)
 ) C
 
 WHERE C.ordinal = 1
@@ -608,7 +683,7 @@ HAVING COUNT(cc.event_id) >= 1
 
 UNION ALL
 -- Begin Criteria Group
-select 1 as index_id, person_id, event_id
+select 3 as index_id, person_id, event_id
 FROM
 (
   select E.person_id, E.event_id 
@@ -670,7 +745,7 @@ HAVING COUNT(cc.event_id) >= 1
 
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 2
+  HAVING COUNT(index_id) = 4
 ) G
 -- End Criteria Group
 ) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id

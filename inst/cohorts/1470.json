@@ -837,201 +837,6 @@
 			}
 		},
 		{
-			"id" : 8,
-			"name" : "[CDS 843] ADT_Androgen Deprivation Therapy_UPDATED  Mar11_drug_final",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 19058410,
-							"CONCEPT_NAME" : "degarelix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "475230",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 739471,
-							"CONCEPT_NAME" : "relugolix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "2472778",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1343039,
-							"CONCEPT_NAME" : "triptorelin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "38782",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1366310,
-							"CONCEPT_NAME" : "goserelin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "50610",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1351541,
-							"CONCEPT_NAME" : "leuprolide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "42375",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 35807385,
-							"CONCEPT_NAME" : "GnRH agonist",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "45768",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "HemOnc",
-							"CONCEPT_CLASS_ID" : "Component Class"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 35807349,
-							"CONCEPT_NAME" : "GnRH antagonist",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "45632",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "HemOnc",
-							"CONCEPT_CLASS_ID" : "Component Class"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1366773,
-							"CONCEPT_NAME" : "histrelin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "50975",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 35834903,
-							"CONCEPT_NAME" : "relugolix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP5040508",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm Extension",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 19010868,
-							"CONCEPT_NAME" : "abarelix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "301739",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 19033280,
-							"CONCEPT_NAME" : "buserelin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1825",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
 			"id" : 9,
 			"name" : "Apalutamide",
 			"expression" : {
@@ -1099,6 +904,362 @@
 							"DOMAIN_ID" : "Drug",
 							"VOCABULARY_ID" : "RxNorm",
 							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 10,
+			"name" : "[CDS 801] Chemotherapy_paclitaxel, cabazitaxel, docetaxel_drug_final",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1378382,
+							"CONCEPT_NAME" : "paclitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "56946",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 902729,
+							"CONCEPT_NAME" : "Paclitaxel protein-bound",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "OMOP5042943",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm Extension",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40222431,
+							"CONCEPT_NAME" : "cabazitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "996051",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1315942,
+							"CONCEPT_NAME" : "docetaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "72962",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 11,
+			"name" : "[CDS 568] Radiotherapy broad_Proc_FINAL",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2108724,
+							"CONCEPT_NAME" : "External beam radiotherapy as primary therapy to prostate with or without nodal irradiation (PRCA)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4200F",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4198015,
+							"CONCEPT_NAME" : "MRI of prostate for radiotherapy planning",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "431850000",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4041984,
+							"CONCEPT_NAME" : "Laser ablation of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "118164001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2110047,
+							"CONCEPT_NAME" : "Transperineal placement of needles or catheters into prostate for interstitial radioelement application, with or without cystoscopy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "55875",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2108725,
+							"CONCEPT_NAME" : "External beam radiotherapy with or without nodal irradiation as adjuvant or salvage therapy for prostate cancer patient (PRCA)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4201F",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4029715,
+							"CONCEPT_NAME" : "Radiation oncology AND/OR radiotherapy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "108290001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4330932,
+							"CONCEPT_NAME" : "CT of prostate for radiotherapy planning",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "429856001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2110043,
+							"CONCEPT_NAME" : "Exposure of prostate, any approach, for insertion of radioactive substance; with bilateral pelvic lymphadenectomy, including external iliac, hypogastric and obturator nodes",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "55865",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2108677,
+							"CONCEPT_NAME" : "Patient counseling at a minimum on all of the following treatment options for clinically localized prostate cancer: active surveillance, and interstitial prostate brachytherapy, and external beam radiotherapy, and radical prostatectomy, provided prior to ",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4163F",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40487861,
+							"CONCEPT_NAME" : "Endoscopic excision of prostate using holmium laser",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "446445003",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4193061,
+							"CONCEPT_NAME" : "Endoscopic resection of prostate using an electrotome",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "314202001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 44783041,
+							"CONCEPT_NAME" : "Holmium laser enucleation of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "699075006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 44783043,
+							"CONCEPT_NAME" : "Transurethral thulium laser enucleation of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "699077003",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4237320,
+							"CONCEPT_NAME" : "Procedure with a procedure focus",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "408766003",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4322524,
+							"CONCEPT_NAME" : "Radiation therapy treatment planning service",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "9990009",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4176801,
+							"CONCEPT_NAME" : "Destructive procedure by organ system",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "363068004",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : true,
 						"includeDescendants" : true,
@@ -1336,7 +1497,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 91,
+								"Days" : 0,
 								"Coeff" : -1
 							},
 							"UseIndexEnd" : false,
@@ -1401,7 +1562,7 @@
 					{
 						"Criteria" : {
 							"DrugExposure" : {
-								"CodesetId" : 8,
+								"CodesetId" : 7,
 								"First" : true,
 								"DrugTypeExclude" : false
 							}
@@ -1453,10 +1614,100 @@
 							"Count" : 1,
 							"IsDistinct" : false
 						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 10,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 90,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
 					}
 				],
 				"DemographicCriteriaList" : [],
-				"Groups" : []
+				"Groups" : [
+					{
+						"Type" : "AT_MOST",
+						"Count" : 0,
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"ProcedureOccurrence" : {
+										"CodesetId" : 11,
+										"ProcedureTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 90,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"Observation" : {
+										"CodesetId" : 11,
+										"ObservationTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 90,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					}
+				]
 			}
 		}
 	],

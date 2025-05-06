@@ -808,6 +808,54 @@ GROUP BY cc.person_id, cc.event_id
 HAVING COUNT(cc.event_id) >= 1
 -- End Correlated Criteria
 
+UNION ALL
+-- Begin Correlated Criteria
+select 1 as index_id, cc.person_id, cc.event_id
+from (SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Observation Criteria
+select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
+       C.visit_occurrence_id, C.observation_date as sort_date
+from 
+(
+  select o.* 
+  FROM @cdm_database_schema.OBSERVATION o
+JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 13)
+) C
+
+
+-- End Observation Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
+GROUP BY cc.person_id, cc.event_id
+HAVING COUNT(cc.event_id) >= 1
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+select 2 as index_id, cc.person_id, cc.event_id
+from (SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.visit_occurrence_id, C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets cs on (po.procedure_concept_id = cs.concept_id and cs.codeset_id = 13)
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
+GROUP BY cc.person_id, cc.event_id
+HAVING COUNT(cc.event_id) >= 1
+-- End Correlated Criteria
+
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
   HAVING COUNT(index_id) > 0

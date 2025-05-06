@@ -10231,6 +10231,60 @@
 									"Count" : 1,
 									"IsDistinct" : false
 								}
+							},
+							{
+								"Criteria" : {
+									"Observation" : {
+										"CodesetId" : 13,
+										"ObservationTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 365,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 30,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"ProcedureOccurrence" : {
+										"CodesetId" : 13,
+										"ProcedureTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 365,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 30,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
 							}
 						],
 						"DemographicCriteriaList" : [],

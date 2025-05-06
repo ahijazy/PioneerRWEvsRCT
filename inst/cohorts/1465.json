@@ -1310,6 +1310,158 @@
 					}
 				]
 			}
+		},
+		{
+			"id" : 10,
+			"name" : "[CDS 801] Chemotherapy_paclitaxel, cabazitaxel, docetaxel_drug_final",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1378382,
+							"CONCEPT_NAME" : "paclitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "56946",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 902729,
+							"CONCEPT_NAME" : "Paclitaxel protein-bound",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "OMOP5042943",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm Extension",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40222431,
+							"CONCEPT_NAME" : "cabazitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "996051",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1315942,
+							"CONCEPT_NAME" : "docetaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "72962",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 11,
+			"name" : "Any ARTA or ARSI",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40239056,
+							"CONCEPT_NAME" : "abiraterone",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1100072",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 963987,
+							"CONCEPT_NAME" : "apalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1999574",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 42900250,
+							"CONCEPT_NAME" : "enzalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1307298",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1361291,
+							"CONCEPT_NAME" : "darolutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "2180325",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
 		}
 	],
 	"QualifiedLimit" : {
@@ -1540,7 +1692,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 91,
+								"Days" : 0,
 								"Coeff" : -1
 							},
 							"UseIndexEnd" : false,
@@ -1605,7 +1757,60 @@
 					{
 						"Criteria" : {
 							"DrugExposure" : {
-								"CodesetId" : 8,
+								"CodesetId" : 10,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 90,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugEra" : {
+								"CodesetId" : 11
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 90,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 7,
 								"First" : true,
 								"DrugTypeExclude" : false
 							}
