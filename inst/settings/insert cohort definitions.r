@@ -2,7 +2,7 @@ library(ROhdsiWebApi)
 
 baseUrl <-"https://pioneer.hzdr.de/WebAPI"
 
-token <- 'Bearer '
+token <- 'Bearer  '
 setAuthHeader(baseUrl = baseUrl, token)
 
 # after inserting the cohorts

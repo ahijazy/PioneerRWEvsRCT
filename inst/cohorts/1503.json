@@ -1326,7 +1326,7 @@
 					{
 						"Criteria" : {
 							"DrugExposure" : {
-								"CodesetId" : 7,
+								"CodesetId" : 8,
 								"DrugTypeExclude" : false
 							}
 						},
@@ -1336,7 +1336,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 30,
 								"Coeff" : -1
 							},
 							"UseIndexEnd" : false,
@@ -1407,7 +1407,7 @@
 						},
 						"StartWindow" : {
 							"Start" : {
-								"Days" : 0,
+								"Days" : 30,
 								"Coeff" : -1
 							},
 							"End" : {
