@@ -47,11 +47,4 @@ PioneerRWEvsRCT::execute(
   databaseName = databaseName,
   databaseDescription = databaseDescription
 )
-
-CohortDiagnostics::createMergedResultsFile(
-  dataFolder = outputFolder,
-  sqliteDbPath = file.path(outputFolder,
-                           "MergedCohortDiagnosticsData.sqlite")
-)
-
-CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = outputFolder)
+ 
