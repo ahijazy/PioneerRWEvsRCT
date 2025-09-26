@@ -499,6 +499,23 @@ UNION  select c.concept_id
   and c.invalid_reason is null
 
 ) I
+) C UNION ALL 
+SELECT 57 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4119613,316427,4121641,316995,3189327,4124846,4160782,4020601,4127089,37115756,4134723,4137350,4104178,4107246)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4119613,316427,4121641,316995,3189327,4124846,4160782,4020601,4127089,37115756,4134723,4137350,4104178,4107246)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (321109,317576,4109490,37018767,4270354,4194618,40483833,4258690,4080593,40482719)
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
 ) C
 ;
 
@@ -1483,12 +1500,12 @@ HAVING COUNT(cc.event_id) >= 1
 UNION ALL
 -- Begin Correlated Criteria
 select 3 as index_id, cc.person_id, cc.event_id
-from (SELECT p.person_id, p.event_id , A.domain_concept_id
+from (SELECT p.person_id, p.event_id 
 FROM #qualified_events P
 JOIN (
   -- Begin Condition Occurrence Criteria
 SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
-  C.visit_occurrence_id, C.condition_start_date as sort_date, C.condition_concept_id as domain_concept_id
+  C.visit_occurrence_id, C.condition_start_date as sort_date
 FROM 
 (
   SELECT co.* 
@@ -1501,7 +1518,7 @@ FROM
 
 ) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
 GROUP BY cc.person_id, cc.event_id
-HAVING COUNT(DISTINCT cc.domain_concept_id) >= 1
+HAVING COUNT(cc.event_id) >= 1
 -- End Correlated Criteria
 
 UNION ALL
@@ -1542,6 +1559,30 @@ FROM
   SELECT co.* 
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
   JOIN #Codesets cs on (co.condition_concept_id = cs.concept_id and cs.codeset_id = 35)
+) C
+
+
+-- End Condition Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
+GROUP BY cc.person_id, cc.event_id
+HAVING COUNT(cc.event_id) >= 1
+-- End Correlated Criteria
+
+UNION ALL
+-- Begin Correlated Criteria
+select 6 as index_id, cc.person_id, cc.event_id
+from (SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+  C.visit_occurrence_id, C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets cs on (co.condition_concept_id = cs.concept_id and cs.codeset_id = 57)
 ) C
 
 

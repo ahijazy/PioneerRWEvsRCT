@@ -1524,12 +1524,12 @@ HAVING COUNT(cc.event_id) >= 1
 UNION ALL
 -- Begin Correlated Criteria
 select 3 as index_id, cc.person_id, cc.event_id
-from (SELECT p.person_id, p.event_id , A.domain_concept_id
+from (SELECT p.person_id, p.event_id 
 FROM #qualified_events P
 JOIN (
   -- Begin Condition Occurrence Criteria
 SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
-  C.visit_occurrence_id, C.condition_start_date as sort_date, C.condition_concept_id as domain_concept_id
+  C.visit_occurrence_id, C.condition_start_date as sort_date
 FROM 
 (
   SELECT co.* 
@@ -1542,7 +1542,7 @@ FROM
 
 ) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
 GROUP BY cc.person_id, cc.event_id
-HAVING COUNT(DISTINCT cc.domain_concept_id) >= 1
+HAVING COUNT(cc.event_id) >= 1
 -- End Correlated Criteria
 
 UNION ALL

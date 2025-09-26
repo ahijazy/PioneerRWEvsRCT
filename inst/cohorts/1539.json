@@ -11133,7 +11133,7 @@
 								"Occurrence" : {
 									"Type" : 2,
 									"Count" : 1,
-									"IsDistinct" : true,
+									"IsDistinct" : false,
 									"CountColumn" : "DOMAIN_CONCEPT"
 								}
 							},

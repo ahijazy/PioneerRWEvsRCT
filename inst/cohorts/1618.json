@@ -1750,6 +1750,33 @@
 									"Count" : 1,
 									"IsDistinct" : false
 								}
+							},
+							{
+								"Criteria" : {
+									"ConditionOccurrence" : {
+										"CodesetId" : 32,
+										"ConditionTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 365,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 30,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
 							}
 						],
 						"DemographicCriteriaList" : [],

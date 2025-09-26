@@ -4207,101 +4207,6 @@ from
 (
   select m.* 
   FROM @cdm_database_schema.MEASUREMENT m
-JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 51)
-) C
-
-WHERE C.value_as_number < 20.0000
--- End Measurement Criteria
-
-) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
-GROUP BY cc.person_id, cc.event_id
-HAVING COUNT(cc.event_id) >= 1
--- End Correlated Criteria
-
-UNION ALL
--- Begin Correlated Criteria
-select 1 as index_id, cc.person_id, cc.event_id
-from (SELECT p.person_id, p.event_id 
-FROM #qualified_events P
-JOIN (
-  -- Begin Observation Criteria
-select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
-       C.visit_occurrence_id, C.observation_date as sort_date
-from 
-(
-  select o.* 
-  FROM @cdm_database_schema.OBSERVATION o
-JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 52)
-) C
-
-WHERE C.value_as_number < 20.0000
--- End Observation Criteria
-
-) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-365,P.START_DATE) AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc 
-GROUP BY cc.person_id, cc.event_id
-HAVING COUNT(cc.event_id) >= 1
--- End Correlated Criteria
-
-UNION ALL
--- Begin Demographic Criteria
-SELECT 2 as index_id, e.person_id, e.event_id
-FROM #qualified_events E
-JOIN @cdm_database_schema.PERSON P ON P.PERSON_ID = E.PERSON_ID
-WHERE YEAR(E.start_date) - P.year_of_birth > 80
-GROUP BY e.person_id, e.event_id
--- End Demographic Criteria
-
-  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
-  GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) > 0
-) G
--- End Criteria Group
-
-  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
-  GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) > 0
-) G
--- End Criteria Group
-) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
-) Results
-;
-
-select 10 as inclusion_rule_id, person_id, event_id
-INTO #Inclusion_10
-FROM 
-(
-  select pe.person_id, pe.event_id
-  FROM #qualified_events pe
-  
-JOIN (
--- Begin Criteria Group
-select 0 as index_id, person_id, event_id
-FROM
-(
-  select E.person_id, E.event_id 
-  FROM #qualified_events E
-  INNER JOIN
-  (
-    -- Begin Criteria Group
-select 0 as index_id, person_id, event_id
-FROM
-(
-  select E.person_id, E.event_id 
-  FROM #qualified_events E
-  INNER JOIN
-  (
-    -- Begin Correlated Criteria
-select 0 as index_id, cc.person_id, cc.event_id
-from (SELECT p.person_id, p.event_id 
-FROM #qualified_events P
-JOIN (
-  -- Begin Measurement Criteria
-select C.person_id, C.measurement_id as event_id, C.measurement_date as start_date, DATEADD(d,1,C.measurement_date) as END_DATE,
-       C.visit_occurrence_id, C.measurement_date as sort_date
-from 
-(
-  select m.* 
-  FROM @cdm_database_schema.MEASUREMENT m
 JOIN #Codesets cs on (m.measurement_concept_id = cs.concept_id and cs.codeset_id = 9)
 ) C
 
@@ -5134,9 +5039,7 @@ select inclusion_rule_id, person_id, event_id from #Inclusion_7
 UNION ALL
 select inclusion_rule_id, person_id, event_id from #Inclusion_8
 UNION ALL
-select inclusion_rule_id, person_id, event_id from #Inclusion_9
-UNION ALL
-select inclusion_rule_id, person_id, event_id from #Inclusion_10) I;
+select inclusion_rule_id, person_id, event_id from #Inclusion_9) I;
 TRUNCATE TABLE #Inclusion_0;
 DROP TABLE #Inclusion_0;
 
@@ -5167,9 +5070,6 @@ DROP TABLE #Inclusion_8;
 TRUNCATE TABLE #Inclusion_9;
 DROP TABLE #Inclusion_9;
 
-TRUNCATE TABLE #Inclusion_10;
-DROP TABLE #Inclusion_10;
-
 
 select event_id, person_id, start_date, end_date, op_start_date, op_end_date
 into #included_events
@@ -5184,7 +5084,7 @@ FROM (
   ) MG -- matching groups
 
   -- the matching group with all bits set ( POWER(2,# of inclusion rules) - 1 = inclusion_rule_mask
-  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),11)-1)
+  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),10)-1)
 
 ) Results
 WHERE Results.ordinal = 1

@@ -1117,7 +1117,7 @@
 							"VOCABULARY_ID" : "RxNorm",
 							"CONCEPT_CLASS_ID" : "Ingredient"
 						},
-						"isExcluded" : false,
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
@@ -1151,7 +1151,7 @@
 							"VOCABULARY_ID" : "RxNorm",
 							"CONCEPT_CLASS_ID" : "Ingredient"
 						},
-						"isExcluded" : false,
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					}
