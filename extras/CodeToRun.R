@@ -1,5 +1,6 @@
 library(PioneerRWEvsRCT)
-
+# start by 
+renv::restore()
 # Maximum number of cores to be used:
 maxCores <- parallel::detectCores()
 
@@ -41,7 +42,7 @@ PioneerRWEvsRCT::execute(
   cdmDatabaseSchema = cdmDatabaseSchema,
   cohortDatabaseSchema = cohortDatabaseSchema,
   cohortTable = cohortTable,
-  verifyDependencies = TRUE,
+  verifyDependencies = FALSE,
   outputFolder = outputFolder,
   databaseId = databaseId,
   databaseName = databaseName,
