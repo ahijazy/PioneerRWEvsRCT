@@ -2,9 +2,9 @@ Package: PioneerRWEvsRCT
 Type: Package
 Title: A Study Package for Generating Cohort Diagnostics
 Version: 0.0.1
-Author: Gowtham Rao [aut, cre]
+Author: Ayman Hijazy [aut, cre]
 Date: 2023-02-11
-Maintainer: Gowtham Rao <rao@ohdsi.org>
+Maintainer: Ayman Hijazy <ayman_hijazy@epam.com>
 Description: A package that generates cohort diagnostics for cohort definitions included in the package.
 Depends:
   R (>= 4.1.0)
