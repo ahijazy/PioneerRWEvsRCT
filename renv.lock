@@ -17,13 +17,13 @@
     },
     "CohortDiagnostics": {
       "Package": "CohortDiagnostics",
-      "Version": "3.2.1",
+      "Version": "3.2.4",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "CohortDiagnostics",
       "RemoteUsername": "ohdsi",
-      "RemoteRef": "v3.2.1"
+      "RemoteRef": "v3.2.4"
     },
     "CohortGenerator": {
       "Package": "CohortGenerator",
@@ -582,3 +582,4 @@
     }
   }
 }
+
